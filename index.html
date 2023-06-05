@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boilerplate Page</title>
+  <meta name="Bondietti Design HTML Boilerplate" content="This is an HTML and CSS boilerplate page from which I make all my sites.">
+  <meta name="author" content="Brian Bondietti">
+  <link rel="stylesheet" href="css/styles.css?v=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Simple Cards</h1>
+        <p>These cards have an effect that displays a shadow on hover and turns blue when activated.</p>
+        
+        <div class="card">
+            <div class="card-image">
+                <img src="margiesfavorite.png" alt="card image details">
+            </div>
+            <div class="card-text">
+                <h2 class="card-header">Header</h2>
+                <p class="card-subheader">Subheader</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="margiesfavorite.png" alt="card image details">
+            </div>
+            <div class="card-text">
+                <h2 class="card-header">Header</h2>
+                <p class="card-subheader">Subheader</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="margiesfavorite.png" alt="card image details">
+            </div>
+            <div class="card-text">
+                <h2 class="card-header">Header</h2>
+                <p class="card-subheader">Subheader</p>
+            </div>
+        </div>
+    </div>
+
+<script src="js/scripts.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var cards = document.querySelectorAll('.card');
+
+    cards.forEach(function(card) {
+        card.addEventListener('click', function() {
+            // remove active class from all cards
+            cards.forEach(function(innerCard) {
+                innerCard.classList.remove('active');
+            });
+
+            // add active class to the clicked card
+            this.classList.add('active');
+        });
+    });
+});
+</script>
+
+</body>
+</html>
